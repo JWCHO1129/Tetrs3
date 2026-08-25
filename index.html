@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="main-content">
+            <canvas id="gameCanvas" width="300" height="600"></canvas>
+            <div id="gameOverScreen" class="overlay hidden">
+                <h2>Game Over</h2>
+                <p>Score: <span id="finalScore">0</span></p>
+                <button id="restartBtnOverlay">Play Again</button>
+            </div>
+            <div id="pauseScreen" class="overlay hidden">
+                <h2>Paused</h2>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="panel">
+                <h3>Score</h3>
+                <p id="score">0</p>
+            </div>
+            <div class="panel">
+                <h3>Level</h3>
+                <p id="level">1</p>
+            </div>
+            <div class="panel">
+                <h3>Next Piece</h3>
+                <canvas id="nextCanvas" width="120" height="120"></canvas>
+            </div>
+            <div class="controls">
+                <button id="pauseBtn">Pause</button>
+                <button id="restartBtn">Restart</button>
+            </div>
+            <div class="instructions">
+                <p><strong>Controls:</strong></p>
+                <p>&larr; &rarr; Move</p>
+                <p>&uarr; Rotate</p>
+                <p>&darr; Soft Drop</p>
+                <p>Space - Hard Drop</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
